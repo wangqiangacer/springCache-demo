@@ -20,4 +20,9 @@ public class UserController {
     public  void  deleteUser(@PathVariable("id") Integer id){
         userService.delete(id);
     }
+    @RequestMapping("/remove")
+    public  String removeCache(){
+        userService.removeCache();
+        return "success";
+    }
 }
